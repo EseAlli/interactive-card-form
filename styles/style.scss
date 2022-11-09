@@ -29,6 +29,7 @@ body {
 
 main {
   display: flex;
+  height: 100vh;
 }
 
 section {
@@ -36,11 +37,91 @@ section {
   flex-direction: column;
 }
 
+.card {
+  background-image: url(../images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 2rem 0rem 3rem 0rem;
+  margin-bottom: 4rem;
+  background-size: cover;
+
+  img {
+    width: 85%;
+    display: block;
+    max-width: 285px;
+  }
+
+  & > div {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+}
+
+.card-back {
+  position: relative;
+  span {
+    position: absolute;
+    right: 12%;
+    top: 45%;
+    font-size: 0.65rem;
+    color: var(--white);
+  }
+  img {
+    margin-left: auto;
+    width: 90%;
+  }
+}
+
+.card-placeholder {
+  color: var(--white);
+
+  div {
+    padding: 1rem;
+    position: absolute;
+    bottom: -2.25rem;
+
+    img {
+      width: 25%;
+      height: 25%;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+    letter-spacing: 0.125rem;
+  }
+
+  p {
+    display: flex;
+    margin: 1rem 0;
+  }
+
+  p,
+  span {
+    text-transform: uppercase;
+    font-size: 0.65rem;
+  }
+
+  span {
+    margin-left: auto;
+    display: inline-block;
+  }
+}
+
+.card-front {
+  position: absolute;
+  top: 50%;
+}
+
 form {
-  padding: 1rem 1.75rem;
+  padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
+  // margin-top: auto;
 }
 
 label {
@@ -71,7 +152,7 @@ button {
   border: none;
   color: var(--primary-grayish-violet);
   border-radius: 0.5rem;
-  padding: 1.25rem 0;
+  padding: 0.85rem 0;
   font-size: 1.125rem;
   margin: 1rem 0;
   font-weight: 500;
@@ -79,15 +160,29 @@ button {
 }
 
 .date-cvc {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   input {
     margin-top: 0.5rem;
   }
 }
 
 .date {
+  width: 100%;
+  gap: 0.25rem;
   input {
     inline-size: 45%;
     display: inline;
+    margin-right: 3px;
+  }
+}
+
+.cvc {
+  inline-size: 100%;
+}
+
+@media (min-width: 375px) {
+  .card {
+    background-image: url(../images/bg-main-desktop.png);
   }
 }

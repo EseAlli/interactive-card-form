@@ -17,9 +17,25 @@
   <body>
     <main>
       <section>
-        <div class="card-photos">
-          <img src="./images/bg-card-back.png" />
-          <img src="./images/bg-card-front.png" />
+        <div class="card">
+          <div class="cards">
+            <div class="card-back">
+              <img src="./images/bg-card-back.png" alt="card-back" />
+              <span> 000 </span>
+            </div>
+            <div class="card-placeholder">
+              <img
+                src="./images/bg-card-front.png"
+                class="card-front"
+                alt="card-front"
+              />
+              <div>
+                <img src="./images/card-logo.svg" alt="card-logo" />
+                <h3>0000 0000 0000 0000</h3>
+                <p>Jane Appleseed <span>00/00</span></p>
+              </div>
+            </div>
+          </div>
         </div>
         <form>
           <label>Cardholder Name</label>
@@ -32,7 +48,9 @@
               <input type="" placeholder="MM" />
               <input placeholder="YY" />
             </div>
-            <div><label>CVC</label> <input placeholder="e.g. 123" /></div>
+            <div>
+              <label>CVC</label> <input placeholder="e.g. 123" class="cvc" />
+            </div>
           </div>
           <button>Confirm</button>
         </form>
@@ -44,6 +62,5 @@
         </div>
       </section>
     </main>
-    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 -->
   </body>
 </html>
