@@ -234,7 +234,7 @@ button {
   }
   .card {
     & > div {
-      right: -3rem;
+      right: -4rem;
       position: absolute;
     }
   }
@@ -243,7 +243,7 @@ button {
 @media (min-width: 1280px) {
   .card {
     & > div {
-      right: -9rem;
+      right: -18rem;
       position: absolute;
       max-width: 100%;
     }
