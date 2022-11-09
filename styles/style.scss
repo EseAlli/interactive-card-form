@@ -199,7 +199,6 @@ button {
   .card {
     margin-bottom: 0rem;
     display: flex;
-    // align-items: center;
     justify-content: flex-end;
     position: relative;
 
@@ -210,6 +209,7 @@ button {
     & > div {
       position: absolute;
       top: 20%;
+      left: 10%;
     }
   }
 
@@ -223,7 +223,7 @@ button {
 
   .card-placeholder {
     div {
-      bottom: 13.75rem;
+      bottom: 11.75rem;
     }
   }
 }
@@ -253,6 +253,10 @@ button {
     }
   }
 
+  .card-front {
+    left: -5%;
+  }
+
   .card-back {
     span {
       font-size: 0.85rem;
@@ -267,6 +271,15 @@ button {
     p,
     span {
       font-size: 0.85rem;
+    }
+
+    div {
+      bottom: 12.75rem;
+      left: -1.25rem;
+
+      img {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
