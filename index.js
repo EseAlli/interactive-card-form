@@ -11,7 +11,17 @@ form.addEventListener("submit", (event) => {
 });
 
 numberInput.addEventListener("change", () => {
+  console.log(numberInput.value.length);
   cardNumber.innerHTML = numberInput.value;
+  if (numberInput.value.length > 0) {
+    if (
+      numberInput.value.length === 4 ||
+      numberInput.value.length === 9 ||
+      numberInput.value.length === 14
+    ) {
+      numberInput.value += " ";
+    }
+  }
 });
 
 nameInput.addEventListener("change", () => {
