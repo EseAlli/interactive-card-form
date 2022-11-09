@@ -21,7 +21,7 @@
           <div class="cards">
             <div class="card-back">
               <img src="./images/bg-card-back.png" alt="card-back" />
-              <span> 000 </span>
+              <span class="CVC"> 000 </span>
             </div>
             <div class="card-placeholder">
               <img
@@ -31,25 +31,30 @@
               />
               <div>
                 <img src="./images/card-logo.svg" alt="card-logo" />
-                <h3>0000 0000 0000 0000</h3>
-                <p>Jane Appleseed <span>00/00</span></p>
+                <h3 class="card-no">0000 0000 0000 0000</h3>
+                <p class="card-holder">Jane Appleseed <span>00/00</span></p>
               </div>
             </div>
           </div>
         </div>
         <form>
           <label>Cardholder Name</label>
-          <input placeholder="e.g. Jane Appleseed" />
+          <input placeholder="e.g. Jane Appleseed" class="card-name" />
           <label>Card Number</label>
-          <input placeholder="e.g. 1234 5678 9123 0000" />
+          <input
+            placeholder="e.g. 1234 5678 9123 0000"
+            class="card-number"
+            maxlength="16"
+          />
           <div class="date-cvc">
             <div class="date">
               <label>Exp. Date (MM/YY)</label>
-              <input type="" placeholder="MM" />
-              <input placeholder="YY" />
+              <input type="" placeholder="MM" maxlength="2" />
+              <input placeholder="YY" maxlength="2" />
             </div>
             <div>
-              <label>CVC</label> <input placeholder="e.g. 123" class="cvc" />
+              <label>CVC</label>
+              <input placeholder="e.g. 123" class="cvc" maxlength="3" />
             </div>
           </div>
           <button>Confirm</button>
