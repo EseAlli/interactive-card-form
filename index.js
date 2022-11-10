@@ -9,6 +9,7 @@ const year = document.querySelector(".year");
 const month = document.querySelector(".month");
 const dateError = document.querySelector(".date small");
 const inputs = Array.from(document.querySelectorAll(".date-cvc input"));
+const formInputs = Array.from(document.querySelectorAll("input"));
 
 function checkValidity() {
   let pattern = /^[0-9]*$/;
@@ -19,6 +20,21 @@ function checkValidity() {
   } else {
     numberInput.classList.remove = "error";
     numberInput.nextElementSibling.style.display = "none";
+  }
+
+  if (
+    !(
+      numberInput.value === "" &&
+      nameInput.value === "" &&
+      cvcInput.value === "" &&
+      year.value === "" &&
+      month.value === ""
+    )
+  ) {
+    console.log("hello");
+    formInputs.forEach((input) => {
+      input.value === "";
+    });
   }
 }
 
@@ -49,12 +65,12 @@ cvcInput.addEventListener("change", () => {
 });
 
 function checkBlank() {
-  if (this.value === "") {
+  if (this.value === "") {]
     this.classList.add = "error";
-    this.nextElementSibling.style.display = "block";
-
     if (this.classList.contains("year")) {
       dateError.style.display = "block";
+    } else {
+      this.nextElementSibling.style.display = "block";
     }
   } else {
     this.classList.remove = "error";
@@ -63,8 +79,8 @@ function checkBlank() {
   }
 }
 
-cvcInput.addEventListener("focus", checkBlank);
+cvcInput.addEventListener("keydown", checkBlank);
 
-year.addEventListener("focus", checkBlank);
+year.addEventListener("keydown", checkBlank);
 
-month.addEventListener("focus", checkBlank);
+month.addEventListener("keydown", checkBlank);
