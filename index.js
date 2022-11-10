@@ -10,14 +10,14 @@ const month = document.querySelector(".month");
 const dateError = document.querySelector(".date small");
 
 function checkValidity() {
-  let pattern = /[abc]/g;
-  let cardNo = numberInput.value;
-  console.log(cardNo);
-  console.log(cardNo.match(pattern));
-  if (cardNo.match(pattern)) {
-    numberInput.classList.add = "error";
-    numberInput.nextElementSibling.style.display = "block";
-  }
+  //   let pattern = /[abc]/g;
+  //   let cardNo = numberInput.value;
+  //   console.log(cardNo);
+  //   console.log(cardNo.match(pattern));
+  //   if (cardNo.match(pattern)) {
+  //     numberInput.classList.add = "error";
+  //     numberInput.nextElementSibling.style.display = "block";
+  //   }
 }
 
 form.addEventListener("submit", (event) => {
