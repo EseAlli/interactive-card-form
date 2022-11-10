@@ -66,17 +66,13 @@ cvcInput.addEventListener("keyup", () => {
 function checkBlank() {
   if (this.value === "") {
     this.classList.add = "error";
-    if (this.classList.contains("month")) {
-      dateError.style.display = "block";
-    } else {
-      this.nextElementSibling.style.display = "block";
-    }
+    this.classList.contains("month")
+      ? (dateError.style.display = "block")
+      : (this.nextElementSibling.style.display = "block");
   } else {
-    if (this.classList.contains("month")) {
-      dateError.style.display = "none";
-    } else {
-      this.nextElementSibling.style.display = "none";
-    }
+    this.classList.contains("month")
+      ? (dateError.style.display = "none")
+      : (this.nextElementSibling.style.display = "none");
     this.classList.remove = "error";
   }
 }
