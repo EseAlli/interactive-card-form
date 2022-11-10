@@ -38,6 +38,12 @@ section {
   width: 100%;
 }
 
+small {
+  color: var(--primary-red);
+  margin-bottom: 0.5rem;
+  display: none;
+}
+
 .card {
   background-image: url(../images/bg-main-mobile.png);
   background-repeat: no-repeat;
@@ -133,14 +139,33 @@ label {
   color: var(--primary-violet);
   font-size: 0.85rem;
   letter-spacing: 0.075rem;
+  margin-top: 0.75rem;
 }
 
 input {
   display: block;
   padding: 1rem;
-  margin-bottom: 0.75rem;
   border-radius: 8px;
   border: 1.5px solid var(--primary-grayish-violet);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    border-image: linear-gradient(
+        to right,
+        hsl(249, 99%, 64%),
+        hsl(278, 94%, 30%)
+      )
+      1;
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  &.error {
+    border: 1px solid var(--primary-red);
+  }
 }
 
 input::placeholder {
@@ -157,7 +182,7 @@ button {
   border-radius: 0.5rem;
   padding: 0.85rem 0;
   font-size: 1.125rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   font-weight: 500;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -167,6 +192,7 @@ button {
   grid-template-columns: repeat(2, 1fr);
   input {
     margin-top: 0.5rem;
+    margin-bottom: 0;
   }
 }
 

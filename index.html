@@ -46,15 +46,18 @@
             class="card-number"
             maxlength="16"
           />
+          <small>Wrong format, numbers only</small>
           <div class="date-cvc">
             <div class="date">
               <label>Exp. Date (MM/YY)</label>
-              <input type="" placeholder="MM" maxlength="2" />
-              <input placeholder="YY" maxlength="2" />
+              <input type="" placeholder="MM" maxlength="2" class="month" />
+              <input placeholder="YY" maxlength="2" class="year" />
+              <small>Can't be blank</small>
             </div>
             <div>
               <label>CVC</label>
               <input placeholder="e.g. 123" class="cvc" maxlength="3" />
+              <small>Can't be blank</small>
             </div>
           </div>
           <button>Confirm</button>
