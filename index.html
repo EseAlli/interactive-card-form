@@ -32,7 +32,7 @@
               <div>
                 <img src="./images/card-logo.svg" alt="card-logo" />
                 <h3 class="card-no">0000 0000 0000 0000</h3>
-                <p class="card-holder">Jane Appleseed <span>00/00</span></p>
+                <p class="card-holder">Jane Appleseed <span class="card-date"> <span class="mnth">00</span>/<span class="yr">00</span></p>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
           <input
             placeholder="e.g. 1234 5678 9123 0000"
             class="card-number"
-            maxlength="16"
+            maxlength="19"
           />
           <small>Wrong format, numbers only</small>
           <div class="date-cvc">
@@ -74,7 +74,7 @@
           <button>Confirm</button>
         </form>
 
-        <div style="display: none">
+        <div class="thank-you" style="display: none">
           <h1>Thank you!</h1>
           <p>We've added your card details</p>
           <button>Continue</button>

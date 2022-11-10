@@ -10,9 +10,10 @@ const month = document.querySelector(".month");
 const dateError = document.querySelector(".date small");
 const inputs = Array.from(document.querySelectorAll(".date-cvc input"));
 const formInputs = Array.from(document.querySelectorAll("input"));
+const date = document.querySelector(".card-date");
 
 function checkValidity() {
-  let pattern = /^[0-9]*$/;
+  let pattern = /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/;
   let cardNo = numberInput.value;
   if (!cardNo.match(pattern)) {
     numberInput.classList.add = "error";
@@ -32,9 +33,7 @@ function checkValidity() {
     )
   ) {
     console.log("hello");
-    formInputs.forEach((input) => {
-      input.value === "";
-    });
+    form.style.display = "none";
   }
 }
 
@@ -43,7 +42,7 @@ form.addEventListener("submit", (event) => {
   checkValidity();
 });
 
-numberInput.addEventListener("change", (event) => {
+numberInput.addEventListener("keyup", (event) => {
   cardNumber.innerHTML = numberInput.value;
   if (numberInput.value.length > 0) {
     if (
@@ -56,31 +55,41 @@ numberInput.addEventListener("change", (event) => {
   }
 });
 
-nameInput.addEventListener("change", () => {
+nameInput.addEventListener("keyup", () => {
   cardHolder.firstChild.nodeValue = nameInput.value;
 });
 
-cvcInput.addEventListener("change", () => {
+cvcInput.addEventListener("keyup", () => {
   cvc.innerHTML = cvcInput.value;
 });
 
 function checkBlank() {
-  if (this.value === "") {]
+  if (this.value === "") {
     this.classList.add = "error";
-    if (this.classList.contains("year")) {
+    if (this.classList.contains("month")) {
       dateError.style.display = "block";
     } else {
       this.nextElementSibling.style.display = "block";
     }
   } else {
+    if (this.classList.contains("month")) {
+      dateError.style.display = "none";
+    } else {
+      this.nextElementSibling.style.display = "none";
+    }
     this.classList.remove = "error";
-    this.nextElementSibling.style.display = "none";
-    dateError.style.display = "none";
   }
 }
 
 cvcInput.addEventListener("keydown", checkBlank);
-
 year.addEventListener("keydown", checkBlank);
 
+year.addEventListener("keydown", function () {
+  document.querySelector(".yr").innerHTML = this.value;
+});
+
 month.addEventListener("keydown", checkBlank);
+
+month.addEventListener("keydown", function () {
+  document.querySelector(".mnth").innerHTML = this.value;
+});
