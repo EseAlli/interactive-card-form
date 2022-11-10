@@ -8,16 +8,18 @@ const form = document.querySelector("form");
 const year = document.querySelector(".year");
 const month = document.querySelector(".month");
 const dateError = document.querySelector(".date small");
+const inputs = Array.from(document.querySelectorAll(".date-cvc input"));
 
 function checkValidity() {
-  //   let pattern = /[abc]/g;
-  //   let cardNo = numberInput.value;
-  //   console.log(cardNo);
-  //   console.log(cardNo.match(pattern));
-  //   if (cardNo.match(pattern)) {
-  //     numberInput.classList.add = "error";
-  //     numberInput.nextElementSibling.style.display = "block";
-  //   }
+  let pattern = /^[0-9]*$/;
+  let cardNo = numberInput.value;
+  if (!cardNo.match(pattern)) {
+    numberInput.classList.add = "error";
+    numberInput.nextElementSibling.style.display = "block";
+  } else {
+    numberInput.classList.remove = "error";
+    numberInput.nextElementSibling.style.display = "none";
+  }
 }
 
 form.addEventListener("submit", (event) => {
@@ -25,7 +27,7 @@ form.addEventListener("submit", (event) => {
   checkValidity();
 });
 
-numberInput.addEventListener("change", () => {
+numberInput.addEventListener("change", (event) => {
   cardNumber.innerHTML = numberInput.value;
   if (numberInput.value.length > 0) {
     if (
@@ -57,6 +59,7 @@ function checkBlank() {
   } else {
     this.classList.remove = "error";
     this.nextElementSibling.style.display = "none";
+    dateError.style.display = "none";
   }
 }
 

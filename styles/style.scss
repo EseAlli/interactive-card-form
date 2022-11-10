@@ -40,7 +40,7 @@ section {
 
 small {
   color: var(--primary-red);
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   display: none;
 }
 
@@ -190,9 +190,18 @@ button {
 .date-cvc {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 0.75rem;
   input {
     margin-top: 0.5rem;
     margin-bottom: 0;
+
+    &:invalid {
+      border: 1px solid var(--primary-red);
+
+      & + small {
+        display: block;
+      }
+    }
   }
 }
 
