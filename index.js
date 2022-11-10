@@ -11,6 +11,7 @@ const dateError = document.querySelector(".date small");
 const inputs = Array.from(document.querySelectorAll(".date-cvc input"));
 const formInputs = Array.from(document.querySelectorAll("input"));
 const date = document.querySelector(".card-date");
+const thank = document.querySelector(".thank-you");
 
 function checkValidity() {
   let pattern = /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/;
@@ -32,8 +33,8 @@ function checkValidity() {
       month.value === ""
     )
   ) {
-    console.log("hello");
     form.style.display = "none";
+    thank.style.display = "flex";
   }
 }
 

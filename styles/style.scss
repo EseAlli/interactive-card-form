@@ -185,6 +185,7 @@ button {
   margin: 1.5rem 0;
   font-weight: 500;
   font-family: "Space Grotesk", sans-serif;
+  width: 100%;
 
   &:hover {
     cursor: pointer;
@@ -221,6 +222,30 @@ button {
 
 .cvc {
   inline-size: 100%;
+}
+
+.thank-you {
+  align-self: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 2rem auto;
+  gap: 1rem;
+  max-width: 450px;
+
+  & > h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+  }
+
+  img {
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: var(--secondary-grayish-violet);
+  }
 }
 
 @media (min-width: 375px) {
