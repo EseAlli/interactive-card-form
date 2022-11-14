@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/interactive-card-details-form-with-scss-qvYQJVyElf](https://www.frontendmentor.io/solutions/interactive-card-details-form-with-scss-qvYQJVyElf)
-- Live Site URL: [https://github.com/EseAlli/intereactive-card-form](https://github.com/EseAlli/intereactive-card-form)
+- Live Site URL: [https://esealli.github.io/interactive-card-form/](https://esealli.github.io/interactive-card-form/)
 
 ## My process
 
